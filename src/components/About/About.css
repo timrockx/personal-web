@@ -61,7 +61,7 @@
 .answer .message {
     color: white;
     margin-left: 25%;
-    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+    background: #0085D1;
     background-attachment: fixed;
     position: relative;
 }
@@ -74,7 +74,7 @@
     right: -8px;
     height: 20px;
     width: 20px;
-    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+    background: #0085D1;
     background-attachment: fixed;
     border-bottom-left-radius: 15px;
   }
@@ -99,9 +99,13 @@
   .question-box {
     background-color: rgb(229, 229, 234, 0);
     border: none;
-    text-align: center;
+
   }
 
   .question-box:focus {
     background-color: rgb(229, 229, 234, 0);
+    border: none;
+    outline: none;
+    resize: none;
+    box-shadow: none;
   }

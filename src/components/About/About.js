@@ -1,8 +1,39 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import './About.css'
 import { Container, Form } from 'react-bootstrap'
 
 export default function About() {
+    
+    // questions (all questions), filtered questions and search keyword
+    const [questions, setQuestions] = useState([]);
+    const [filteredQuestions, setFilteredQuestions] = useState([]);
+    const [searchKey, setSearchKey] = useState('')
+
+    // fetch questions JSON and set all questions
+    useEffect(() => {
+        axios
+        .get('questions.json')
+        .then((res) => setQuestions(res.data.questions))
+        .catch((err) => console.log(err))
+    }, [])
+
+    // use search key to filter results
+    useEffect(() => {
+        // if there is no searchKey, then we return all questions
+        if(!searchKey) setFilteredQuestions([])
+        const relQuestions = []
+        questions.filter(question => {
+
+            if(question.question.toLowerCase().includes(searchKey.toLowerCase())) {
+                relQuestions.push(question)
+            }
+        })
+        setFilteredQuestions(relQuestions)
+
+     }, [searchKey])
+
+
   return (
     <div className="intro">
         <Container style={{width: "60%"}}>
@@ -49,8 +80,10 @@ export default function About() {
                                 type="search"
                                 placeholder="Ask more here!"
                                 className="question-box"
-                                autoComplete="off">
-                            </Form.Control>
+                                autoComplete="off"
+                                value={searchKey}
+                                onChange={e => setSearchKey(e.target.value)}
+                            />
                         </Form.Group>
                     </Form>
                 </div>
@@ -58,7 +91,19 @@ export default function About() {
 
             <div className="answer messages">
                 <div className="message last">
-                    <h4>My response goes here</h4>
+                    <h5>Ask me one of the following!</h5>
+                    <div>
+                        {filteredQuestions.map(el => {
+                            return (
+                                <div key={el.id}>
+                                    <ul>
+                                        <li>{el.question}</li>
+                                    </ul>
+                                    
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </Container>
