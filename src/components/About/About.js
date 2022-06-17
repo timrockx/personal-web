@@ -9,6 +9,8 @@ export default function About() {
     const [questions, setQuestions] = useState([]);
     const [filteredQuestions, setFilteredQuestions] = useState([]);
     const [searchKey, setSearchKey] = useState('')
+    const [chosenQuestion, setChosenQuestion] = useState('')
+    const [answer, setAnswer] = useState('')
 
     // fetch questions JSON and set all questions
     useEffect(() => {
@@ -42,31 +44,12 @@ export default function About() {
         const questionID = e.currentTarget.id
 
         // get question & answer
-        const question = questions.find(question => question.questionID === questionID)
+        const question = questions.find(question => question.questionID === questionID).question
         const answer = questions.find(question => question.questionID === questionID).answer
 
-        Object.keys(question).map((keyName, i) => {
-            console.log(keyName, question[keyName])
-            // create new div for messages
-        })
+        setChosenQuestion(question)
+        setAnswer(answer)
 
-
-        // create new message field
-        // return (
-        //     Object.keys(question).map((keyName, index) => {
-        //         return (
-        //             <div>
-        //                 <div className="question messages">
-        //                     <div className="message last">
-        //                         {question[keyName]}
-        //                     </div>
-        //                 </div>
-        //             </div>
-        //         )
-        //     })
-        // )
-
-       
      }
 
 
@@ -148,6 +131,27 @@ export default function About() {
                     </div>
                 </div>
             </div>
+
+            
+            {chosenQuestion.length > 0 &&
+                <div className="question messages">
+                    <div className="message last">
+                        <h4>
+                        {chosenQuestion}
+                        </h4>
+                    </div>
+                </div>
+            }
+
+            {answer.length > 0 && 
+             <div className="answer messages">
+                <div className="message last">
+                    <p className="text">
+                       {answer}
+                    </p>
+                </div>
+            </div>
+            }
 
             
         </Container>
