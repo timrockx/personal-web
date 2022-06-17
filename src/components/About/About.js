@@ -33,6 +33,42 @@ export default function About() {
 
      }, [searchKey])
 
+    
+     // put chosen question into message field, and display my answer
+     const answerQuestion = (e) => {
+        e.preventDefault()
+
+        // get question id
+        const questionID = e.currentTarget.id
+
+        // get question & answer
+        const question = questions.find(question => question.questionID === questionID)
+        const answer = questions.find(question => question.questionID === questionID).answer
+
+        Object.keys(question).map((keyName, i) => {
+            console.log(keyName, question[keyName])
+            // create new div for messages
+        })
+
+
+        // create new message field
+        // return (
+        //     Object.keys(question).map((keyName, index) => {
+        //         return (
+        //             <div>
+        //                 <div className="question messages">
+        //                     <div className="message last">
+        //                         {question[keyName]}
+        //                     </div>
+        //                 </div>
+        //             </div>
+        //         )
+        //     })
+        // )
+
+       
+     }
+
 
   return (
     <div className="intro">
@@ -95,19 +131,26 @@ export default function About() {
                     <div>
                         {filteredQuestions.map(el => {
                             return (
-                                <div key={el.id}>
+                                <div key={el.questionID}>
                                     <ul>
-                                        <li>{el.question}</li>
+                                        <li><a 
+                                            href="#"
+                                            style={{textDecoration: "none", color: "#fff"}}
+                                            onClick={answerQuestion}
+                                            id={el.questionID}>
+                                                {el.question}
+                                            </a>
+                                        </li>
                                     </ul>
-                                    
                                 </div>
                             )
                         })}
                     </div>
                 </div>
             </div>
-        </Container>
 
+            
+        </Container>
     </div>
   )
 }
