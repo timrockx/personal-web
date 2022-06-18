@@ -5,7 +5,7 @@ import { Container, Form } from 'react-bootstrap'
 
 export default function About() {
     
-    // questions (all questions), filtered questions and search keyword
+    // all questions, filtered questions, search key, chosen question and respective answer
     const [questions, setQuestions] = useState([]);
     const [filteredQuestions, setFilteredQuestions] = useState([]);
     const [searchKey, setSearchKey] = useState('')
@@ -55,7 +55,7 @@ export default function About() {
 
   return (
     <div className="intro">
-        <Container style={{width: "60%"}}>
+        <Container style={{width: "60%", border: "1px solid black", borderRadius: "25px", padding: "20px"}}>
         
             <div className="question messages">
                 <div className="message last">
@@ -108,29 +108,32 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="answer messages">
-                <div className="message last">
-                    <h5>Ask me one of the following!</h5>
-                    <div>
-                        {filteredQuestions.map(el => {
-                            return (
-                                <div key={el.questionID}>
-                                    <ul>
-                                        <li><a 
-                                            href="#"
-                                            style={{textDecoration: "none", color: "#fff"}}
-                                            onClick={answerQuestion}
-                                            id={el.questionID}>
-                                                {el.question}
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            )
-                        })}
+            {searchKey.length > 0 && 
+                <div className="answer messages">
+                    <div className="message last">
+                        <div>
+                            <h5>Ask me one of the following!</h5>
+                            {filteredQuestions.map(el => {
+                                return (
+                                    <div key={el.questionID}>
+                                        <ul>
+                                            <li><a 
+                                                href="#"
+                                                style={{textDecoration: "none", color: "#fff"}}
+                                                onClick={answerQuestion}
+                                                id={el.questionID}>
+                                                    {el.question}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
+            
 
             
             {chosenQuestion.length > 0 &&
