@@ -3,17 +3,32 @@
         {
             "questionID" : "1",
             "subject": "Education",
-            "question": "What is your favorite class at Lehigh?"
+            "question": "What is your favorite class at Lehigh?",
+            "answer": "Finance 125 because it helped me connect the dots between the corproate accounting classes I took, and the real-world value of financial instruments like stocks and bonds."
         }, 
         {
             "questionID" : "2",
             "subject": "Work",
-            "question": "Tell me about a professional exprience where you had to work on a team."
+            "question": "Tell me about a professional exprience where you had to work on a team.",
+            "answer": "Claudius AI - we are redesigning the entire front-end preparing for launch, therefore we have a bunch of small tasks to work out"
         },
         {
             "questionID" : "3",
             "subject": "Personal",
-            "question": "What are your favorite hobbies?"
+            "question": "What are your favorite hobbies?",
+            "answer": "Over the last few months I've been training as an olympic weightlifter, with the goal to compete at the national level someday. I always viewed sports as a way to escape the stress and nonsense of my personal life, and the gym is a place where I can full zone out all my problems."
+        },
+        {
+            "questionID" : "4",
+            "subject": "Work",
+            "question": "What is your current position?",
+            "answer": "Software Development @ Claudius AI. We are working on developing a platform, claudius.scholar.ai, that helps make the publishing process easier for scholarly law journals."
+        },
+        {
+            "questionID": "5",
+            "subject": "Eduation",
+            "question": "What are you studying at Lehigh?",
+            "answer": "I'm majoring in the CSB (Computer Science and Business) program, and additionally minoring in Data Science with a concentration in finance. My goal is to develop an education that can support a variety of career paths, which gives me flexibility to truly find a job I love."
         }
     ]
 }
