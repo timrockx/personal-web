@@ -1,6 +1,6 @@
 import React from 'react'
 import './Background.css'
-import { Container } from 'react-bootstrap'
+import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,17 +8,17 @@ import { faSchool, faArrowTrendUp, faChalkboardTeacher, faLaptopCode } from '@fo
 
 export default function Background() {
   return (
-    <div>
+    <div style={{paddingBottom: "100px"}}>
         <Container style={{width: "70%", padding: "10px"}}>
 
             <h3 className="my-4" style={{textAlign: "center"}} id="education">
                 Work Experience & Educational Background
             </h3>
 
-            <VerticalTimeline lineColor="#0085D1">  
+            <VerticalTimeline lineColor="#0085D1" className="mb-4">  
 
                 <VerticalTimelineElement
-                    className="vertical-timeline-element--work my-4"
+                    className="vertical-timeline-element--work"
                     contentArrowStyle={{ borderRight: '7px solid rgb(33, 150, 243)' }}
                     icon={<FontAwesomeIcon icon={faSchool}/>}
                     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -94,13 +94,60 @@ export default function Background() {
                 </VerticalTimelineElement>
             </VerticalTimeline>
 
-            <div id="skills">
+            <h3 className="my-5" style={{textAlign: "center"}} id="skills">
+                Skills & Proficiencies
+            </h3>
 
-                <h4>My Skills & Proficiencies</h4>
-
-                
-
-            </div>
+            <Row>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src="https://cdn.vox-cdn.com/thumbor/_AobZZDt_RVStktVR7mUZpBkovc=/0x0:640x427/1200x800/filters:focal(0x0:640x427)/cdn.vox-cdn.com/assets/1087137/java_logo_640.jpg" />
+                        <Card.Body>
+                            <Card.Title>Back-End</Card.Title>
+                            <Card.Text>
+                                <ul style={{listStyle: "none"}}>
+                                    <li>Java</li>
+                                    <li>Python</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </Card.Text>
+                            <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" />
+                        <Card.Body>
+                            <Card.Title>Front-End</Card.Title>
+                            <Card.Text>
+                                <ul style={{listStyle: "none"}}>
+                                    <li>HTML5</li>
+                                    <li>CSS</li>
+                                    <li>Javascript (React.js)</li>
+                                </ul>
+                            </Card.Text>
+                            <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Oracle_SQL_Developer_logo.svg/1200px-Oracle_SQL_Developer_logo.svg.png" />
+                        <Card.Body>
+                            <Card.Title>Data Analysis</Card.Title>
+                            <Card.Text>
+                                <ul style={{listStyle: "none"}}>
+                                        <li>Pandas (Python)</li>
+                                        <li>R</li>
+                                        <li>SQL</li>
+                                </ul>
+                            </Card.Text>
+                            <Button variant="primary">Go somewhere</Button>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
 
 
         </Container>
