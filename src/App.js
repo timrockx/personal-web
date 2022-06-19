@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Menu from './components/Menu/Menu';
 import About from './components/About/About';
-import Education from './components/Education/Education';
+import Background from './components/Background/Background';
+import Test from './components/Portfolio/Test';
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<><Menu/><About/></>} />
-          <Route path="/education" element={<><Menu/><Education/></>} />
+          <Route path="/" element={<><About/><Menu/></>} />
+          <Route path="/background" element={<><Background/><Menu/></>} />
+          <Route path="/projects" element={<><Test/><Menu/></>} />
         </Routes>
       </BrowserRouter>
     </div>
