@@ -7,7 +7,7 @@ export default function Menu() {
   return (
     
     <div className="nav-div">
-        <Container>
+        <Container fluid>
 
           <Navbar className="navbar-nav py-4 mx-auto" fixed="bottom">
   
