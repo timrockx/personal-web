@@ -55,7 +55,7 @@ export default function About() {
 
   return (
     <div className="intro">
-        <Container style={{width: "60%", padding: "10px"}}>
+        <Container fluid style={{width: "60%", padding: "10px"}}>
         
             <div className="question messages">
                 <div className="message last">
