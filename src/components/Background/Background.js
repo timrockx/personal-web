@@ -1,6 +1,6 @@
 import React from 'react'
 import './Background.css'
-import { Container, Row, Col, Card, Button } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
