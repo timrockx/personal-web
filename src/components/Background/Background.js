@@ -5,15 +5,36 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSchool, faArrowTrendUp, faChalkboardTeacher, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import SkillBar from 'react-skillbars'
+
+// array of skills with proficiency levels
+const skills = [
+    {type:'Java', level: 85},
+    {type:'Python', level: 80},
+    {type:'HTML', level: 65},
+    {type:'SQL', level: 60},
+    {type:'CSS', level: 60},
+    {type:'JavaScript', level: 55},
+    {type:'R', level: 55},
+]
+
+// controls colors of skill bars
+const colors = {
+    bar: 'rgb(32, 148, 250)',
+    title: {
+        text:'rgb(58, 58, 60)',
+        background: '#ffffff'
+    }
+}
 
 export default function Background() {
   return (
     <div style={{paddingBottom: "100px"}}>
         <Container style={{width: "70%", padding: "10px"}}>
 
-            <h3 className="my-4" style={{textAlign: "center"}} id="education">
+            <h2 className="my-4" style={{textAlign: "center"}} id="education">
                 Work Experience & Educational Background
-            </h3>
+            </h2>
 
             <VerticalTimeline lineColor="#0085D1" className="mb-4">  
 
@@ -94,60 +115,28 @@ export default function Background() {
                 </VerticalTimelineElement>
             </VerticalTimeline>
 
-            <h3 className="my-5" style={{textAlign: "center"}} id="skills">
-                Skills & Proficiencies
-            </h3>
+            <h2 className="my-5" style={{textAlign: "center"}} id="skills">
+                Skills & Languages
+            </h2>
 
-            <Row>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="https://cdn.vox-cdn.com/thumbor/_AobZZDt_RVStktVR7mUZpBkovc=/0x0:640x427/1200x800/filters:focal(0x0:640x427)/cdn.vox-cdn.com/assets/1087137/java_logo_640.jpg" />
-                        <Card.Body>
-                            <Card.Title>Back-End</Card.Title>
-                            <Card.Text>
-                                <ul style={{listStyle: "none"}}>
-                                    <li>Java</li>
-                                    <li>Python</li>
-                                    <li>SQL</li>
-                                </ul>
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" />
-                        <Card.Body>
-                            <Card.Title>Front-End</Card.Title>
-                            <Card.Text>
-                                <ul style={{listStyle: "none"}}>
-                                    <li>HTML5</li>
-                                    <li>CSS</li>
-                                    <li>Javascript (React.js)</li>
-                                </ul>
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Oracle_SQL_Developer_logo.svg/1200px-Oracle_SQL_Developer_logo.svg.png" />
-                        <Card.Body>
-                            <Card.Title>Data Analysis</Card.Title>
-                            <Card.Text>
-                                <ul style={{listStyle: "none"}}>
-                                        <li>Pandas (Python)</li>
-                                        <li>R</li>
-                                        <li>SQL</li>
-                                </ul>
-                            </Card.Text>
-                            <Button variant="primary">Go somewhere</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
+            <Container style={{width: "95%"}}>
+
+                <h4 className="mt-4" style={{marginBottom:"40px"}}>
+                    Programming ToolKit
+                </h4>
+
+                <SkillBar skills={skills} colors={colors}/>
+
+                <p style={{paddingTop:"10px"}}>
+                    My programming proficiencies span a full stack of software development with
+                    specific experience in the Django Framework. I have experience building native 
+                    Linux applications that interact with SQL Databases, as well as writing scripts in 
+                    R and Python to analyze medium-scale data.
+                </p>
+
+            </Container>
+
+            
 
 
         </Container>
