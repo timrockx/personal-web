@@ -6,10 +6,22 @@
     padding-bottom: 20px;
 }
 
+.chat {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  position: relative;
+}
+
 .messages {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
+
+    animation: message 0.25s ease-out 0s forwards;
+    animation-delay: var(--delay);
+
+    visibility: hidden;
 }
 
 .message {
@@ -20,12 +32,14 @@
     display: inline-block;
  }
 
+ /* questions are messages in grey sent TO me */
 .question {
     align-items: flex-start;
 }
 
 .question .message {
     margin-right: 25%;
+    color: #000;
     background-color: #eee;
     position: relative;
 }
@@ -40,6 +54,7 @@
     width: 20px;
     background: #eee;
     border-bottom-right-radius: 15px;
+  
  }
 
 .question .message.last:after {
@@ -54,16 +69,17 @@
     border-bottom-right-radius: 10px;
 }
 
+/* answers are messages in blue sent FROM me */
 .answer {
     align-items: flex-end;
 }
 
 .answer .message {
-    color: white;
     margin-left: 25%;
+    color: white;
     background: #0085D1;
-    background-attachment: fixed;
     position: relative;
+
 }
 
 .answer .message.last:before {
@@ -96,10 +112,11 @@
     font-weight: 400;
   }
 
+
+  /* search bar formatting */
   .question-box {
     background-color: rgb(229, 229, 234, 0);
     border: none;
-
   }
 
   .question-box:focus {
@@ -108,4 +125,25 @@
     outline: none;
     resize: none;
     box-shadow: none;
+  }
+
+  @keyframes message {
+    0% {
+      visibility: hidden;
+      z-index: -1;
+    }
+
+    80% {
+      visibility: visible;
+      z-index: 80;
+      transform: scale(1.1);
+    }
+
+    100% {
+      visibility: visible;
+      z-index: 100;
+      transform: scale(1);
+      overflow: visible;
+      padding-top: 1rem;
+    }
   }
