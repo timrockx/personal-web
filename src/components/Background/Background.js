@@ -6,6 +6,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSchool, faArrowTrendUp, faChalkboardTeacher, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 import SkillBar from 'react-skillbars'
+import Projects from '../Portfolio/Projects'
 
 // array of skills with proficiency levels
 const skills = [
@@ -115,24 +116,30 @@ export default function Background() {
                 </VerticalTimelineElement>
             </VerticalTimeline>
 
-            <h2 className="my-5" style={{textAlign: "center"}} id="skills">
+            <h2 className="skills-header" id="skills">
                 Skills & Languages
             </h2>
 
-            <Container style={{width: "95%"}}>
+            <Container style={{width: "95%", paddingBottom: "50px"}}>
 
-                <h4 className="mt-4" style={{marginBottom:"40px"}}>
+                <h3 className="mt-4" style={{marginBottom:"40px"}}>
                     Programming ToolKit
-                </h4>
+                </h3>
 
                 <SkillBar skills={skills} colors={colors}/>
 
-                <p style={{paddingTop:"10px"}}>
+                <p className="skills-caption">
                     My programming proficiencies span a full stack of software development with
                     specific experience in the Django Framework. I have experience building native 
                     Linux applications that interact with SQL Databases, as well as writing scripts in 
                     R and Python to analyze medium-scale data.
                 </p>
+
+            </Container>
+
+            <Container>
+
+                <Projects />
 
             </Container>
 
