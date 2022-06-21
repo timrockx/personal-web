@@ -30,7 +30,7 @@ export default function Menu() {
                     <FontAwesomeIcon icon={faWrench}/>&nbsp;Skills
                   </Nav.Link>
 
-                  <Nav.Link as={HashLink} to="/projects" className="nav-link fs-4">
+                  <Nav.Link as={HashLink} to="/background/#projects" className="nav-link fs-4">
                     <FontAwesomeIcon icon={faLaptopCode}/>&nbsp;Projects
                   </Nav.Link>
 
