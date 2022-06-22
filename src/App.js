@@ -1,12 +1,17 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useEffect } from 'react';
 import Menu from './components/Menu/Menu';
 import About from './components/About/About';
 import Background from './components/Background/Background';
-import Test from './components/Portfolio/Test';
 
 function App() {
+
+  useEffect(() => {
+    document.title = "Timothy Lee"
+  }, [])
+
   return (
 
     <div>
@@ -14,17 +19,10 @@ function App() {
         <Routes>
           <Route path="/" element={<><About/><Menu/></>} />
           <Route path="/background" element={<><Background/><Menu/></>} />
-          <Route path="/projects" element={<><Test/><Menu/></>} />
         </Routes>
       </BrowserRouter>
     </div>
 
-
-
-   
-
-    
-    
   );
 }
 
