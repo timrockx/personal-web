@@ -92,8 +92,8 @@ export default function About() {
 
                         <div className="answer messages" >
                             <div className="message last">
-                                <h5>Please stay in touch with me on any of these platforms: </h5>
-                                <ul>
+                                <h5>Stay in touch with me on any of these platforms: </h5>
+                                <ul className="social-media">
                                     <li>
                                         <a style={{textDecoration:"none", color:"#fff"}} target="_blank" href="https://www.linkedin.com/in/timothyyinlee/">
                                             LinkedIn
@@ -105,7 +105,6 @@ export default function About() {
                                             GitHub
                                         </a>
                                     </li>
-
                                     <li>
                                         <a style={{textDecoration:"none", color:"#fff"}} href="mailto: timothyyinlee@gmail.com">
                                             Email

@@ -146,3 +146,13 @@
       padding-top: 0.5rem;
     }
   }
+
+  /* social media links */
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    list-style: none;
+  }
