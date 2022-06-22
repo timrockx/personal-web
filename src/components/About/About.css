@@ -9,7 +9,7 @@
 .chat {
   display: flex;
   flex-direction: column-reverse;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
@@ -133,17 +133,16 @@
       z-index: -1;
     }
 
-    80% {
+    90% {
       visibility: visible;
       z-index: 80;
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
     100% {
       visibility: visible;
       z-index: 100;
       transform: scale(1);
-      overflow: visible;
-      padding-top: 1rem;
+      padding-top: 0.5rem;
     }
   }

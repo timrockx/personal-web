@@ -62,15 +62,15 @@ export default function About() {
     }
 
     const tDelayStyle = {
-        "--delay": '5s',
+        "--delay": '4s',
     }
 
     const foDelayStyle = {
-        "--delay": '7s',
+        "--delay": '6s',
     }
 
     const fiDelayStyle = {
-        "--delay": '8s',
+        "--delay": '7s',
     }
 
 
@@ -81,11 +81,38 @@ export default function About() {
             <div className="chat">
 
                 {answer.length > 0 &&
-                    <div className="answer messages">
-                        <div className="message last">
-                            <p className="text">
-                            {answer}
-                            </p>
+                    <div>
+                        <div className="answer messages">
+                            <div className="message">
+                                <p className="text">
+                                {answer}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="answer messages" >
+                            <div className="message last">
+                                <h5>Please stay in touch with me on any of these platforms: </h5>
+                                <ul>
+                                    <li>
+                                        <a style={{textDecoration:"none", color:"#fff"}} target="_blank" href="https://www.linkedin.com/in/timothyyinlee/">
+                                            LinkedIn
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a style={{textDecoration:"none", color:"#fff"}} target="_blank" href="https://github.com/timrockx">
+                                            GitHub
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a style={{textDecoration:"none", color:"#fff"}} href="mailto: timothyyinlee@gmail.com">
+                                            Email
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 }
