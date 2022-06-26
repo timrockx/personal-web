@@ -11,7 +11,7 @@ export default function () {
         <Container>
 
             <h2 className="projects-header" id="projects">
-                Projects & Showcase
+                Projects & Previous Developments
             </h2>
 
             <VerticalTimeline lineColor="#0085D1" className="mb-4">
