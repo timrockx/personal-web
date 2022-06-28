@@ -126,8 +126,10 @@ export default function Background() {
                     Programming ToolKit
                 </h3>
 
-                <SkillBar skills={skills} colors={colors}/>
-
+                <Container style={{width: "85%"}}>
+                    <SkillBar skills={skills} colors={colors}/>
+                </Container>
+                
                 <p className="skills-caption">
                     My programming proficiencies span a full stack of software development with
                     specific experience in the Django Framework. I have experience building native 
@@ -135,12 +137,51 @@ export default function Background() {
                     R and Python to analyze medium-scale data.
                 </p>
 
+                <div className="skills-cards">
+
+                    <div className="card">
+                        <figure>
+                            <img 
+                            src= "https://www.logo.wine/a/logo/React_(web_framework)/React_(web_framework)-Logo.wine.svg"
+                            alt="ReactJS" />
+                            <figcaption>ReactJS</figcaption>
+                        </figure>
+                    </div>
+
+                    <div className="card">
+                        <figure>
+                            <img 
+                            src= "https://verbose-equals-true.gitlab.io/django-postgres-vue-gitlab-ecs/django.jpg"
+                            alt="ReactJS" />
+                            <figcaption>Django</figcaption>
+                        </figure>
+                    </div>
+
+                    <div className="card">
+                        <figure>
+                            <img 
+                            src= "https://download.logo.wine/logo/Oracle_SQL_Developer/Oracle_SQL_Developer-Logo.wine.png"
+                            alt="ReactJS" />
+                            <figcaption>OracleSQL</figcaption>
+                        </figure>
+                    </div>
+
+                    <div className="card">
+                        <figure>
+                            <img 
+                            src= "https://numfocus.org/wp-content/uploads/2016/07/pandas-logo-300.png"
+                            alt="ReactJS" />
+                            <figcaption>Pandas</figcaption>
+                        </figure>
+                    </div>
+
+                </div>
+
             </Container>
 
+            {/* projects component (vertical timeline) */}
             <Container>
-
                 <Projects />
-
             </Container>
 
             
