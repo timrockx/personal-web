@@ -9,3 +9,25 @@
     margin-bottom: 40px;
 }
 
+.skills-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.card {
+    border: none;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+figcaption {
+    text-align: center;
+}
+
