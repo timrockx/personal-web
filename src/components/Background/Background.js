@@ -140,41 +140,69 @@ export default function Background() {
                 <div className="skills-cards">
 
                     <div className="card">
-                        <figure>
-                            <img 
-                            src= "https://www.logo.wine/a/logo/React_(web_framework)/React_(web_framework)-Logo.wine.svg"
-                            alt="ReactJS" />
-                            <figcaption>ReactJS</figcaption>
-                        </figure>
+                        <div className="card-inner">
+                            <div className="card-front">
+                                <figure>
+                                    <img 
+                                        src= "https://www.logo.wine/a/logo/React_(web_framework)/React_(web_framework)-Logo.wine.svg"
+                                        alt="ReactJS" 
+                                    />
+                                </figure>
+                            </div>
+                            <div className="card-back">
+                                <p>I've been working with React for just 2 months yet, but hey - This website was built with React!</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="card">
-                        <figure>
-                            <img 
-                            src= "https://verbose-equals-true.gitlab.io/django-postgres-vue-gitlab-ecs/django.jpg"
-                            alt="ReactJS" />
-                            <figcaption>Django</figcaption>
-                        </figure>
+                        <div className="card-inner">
+                            <div className="card-front">
+                                <figure>
+                                    <img 
+                                        src= "https://verbose-equals-true.gitlab.io/django-postgres-vue-gitlab-ecs/django.jpg"
+                                        alt="Django" 
+                                    />
+                                </figure>
+                            </div>
+                            <div className="card-back">
+                                <p>Personal and professional development experience within Django for over 1 year.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="card">
-                        <figure>
-                            <img 
-                            src= "https://download.logo.wine/logo/Oracle_SQL_Developer/Oracle_SQL_Developer-Logo.wine.png"
-                            alt="ReactJS" />
-                            <figcaption>OracleSQL</figcaption>
-                        </figure>
+                        <div className="card-inner">
+                            <div className="card-front">
+                                <figure>
+                                    <img 
+                                        src= "https://download.logo.wine/logo/Oracle_SQL_Developer/Oracle_SQL_Developer-Logo.wine.png"
+                                        alt="SQL" 
+                                    />
+                                </figure>
+                            </div>
+                            <div className="card-back">
+                                <p>Experience writing complex subqueries and designing relational databases with stored functions.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="card">
-                        <figure>
-                            <img 
-                            src= "https://numfocus.org/wp-content/uploads/2016/07/pandas-logo-300.png"
-                            alt="ReactJS" />
-                            <figcaption>Pandas</figcaption>
-                        </figure>
+                        <div className="card-inner">
+                            <div className="card-front">
+                                <figure>
+                                    <img 
+                                        src= "https://numfocus.org/wp-content/uploads/2016/07/pandas-logo-300.png"
+                                        alt="Pandas" 
+                                    />
+                                </figure>
+                            </div>
+                            <div className="card-back">
+                                <p>Experience with analyzing data through computing Monte Carlo estimates and Bootstrap Sampling.</p>
+                            </div>
+                        </div>
                     </div>
-
+                    
                 </div>
 
             </Container>
