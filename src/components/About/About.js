@@ -58,19 +58,19 @@ export default function About() {
     }
 
     const sDelayStyle = {
-        "--delay": '2s',
+        "--delay": '1.5s',
     }
 
     const tDelayStyle = {
-        "--delay": '4s',
+        "--delay": '2.5s',
     }
 
     const foDelayStyle = {
-        "--delay": '6s',
+        "--delay": '3.5s',
     }
 
     const fiDelayStyle = {
-        "--delay": '7s',
+        "--delay": '4.5s',
     }
 
 
