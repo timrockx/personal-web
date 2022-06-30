@@ -19,12 +19,13 @@ function App() {
         <title>Timothy Lee</title>
       </Helmet>
 
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<><About/><Menu/></>} />
           <Route path="/background" element={<><Background/><Menu/></>} />
         </Routes>
       </BrowserRouter>
+      
     </div>
 
   );
