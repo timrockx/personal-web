@@ -57,4 +57,41 @@ img {
     object-fit: cover;
 }
 
+.connect {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    text-align: center;
+}
 
+.connect-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 3px gray;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(0, 122, 255);
+    padding: 20px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    
+}
+
+.connect-btn:focus {
+    border: none;
+    outline: none !important; 
+}
+
+.connect-btn:active {
+    border: none;
+    outline: none !important; 
+    box-shadow: none;
+    resize: none;
+}
+
+.email-box:focus {
+    border: none;
+    outline: none !important;
+}

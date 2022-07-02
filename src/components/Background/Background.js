@@ -1,12 +1,13 @@
-import React from 'react'
+import { useState } from 'react'
 import './Background.css'
-import { Container } from 'react-bootstrap'
+import { Container, Form, Button, Modal } from 'react-bootstrap'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSchool, faArrowTrendUp, faChalkboardTeacher, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import { faSchool, faArrowTrendUp, faChalkboardTeacher, faLaptopCode, faMessage } from '@fortawesome/free-solid-svg-icons'
 import SkillBar from 'react-skillbars'
 import Projects from '../Portfolio/Projects'
+import emailjs from '@emailjs/browser'
 
 // array of skills with proficiency levels
 const skills = [
@@ -29,6 +30,42 @@ const colors = {
 }
 
 export default function Background() {
+
+    // modal form for feedback/connecting
+    const [show, setShow] = useState(false);
+
+    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+
+    const [toSend, setToSend] = useState({
+        from_name: '',
+        to_name: '',
+        message: '',
+        reply_to: '',
+      })
+
+      const handleChange = (e) => {
+        setToSend({ ...toSend, [e.target.name]: e.target.value })
+      }
+
+      const onSubmit = (e) => {
+        e.preventDefault();
+        emailjs.send(
+        'service_19mj5qd',
+        'template_ir24x1b',
+        toSend,
+        'x3xRnupfgldvy_pnL'
+        )
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+        })
+        .catch((err) => {
+            console.log('FAILED...', err);
+        });
+
+        handleClose();
+      };
+
   return (
     <div style={{paddingBottom: "100px"}}>
         <Container style={{width: "70%", padding: "10px"}}>
@@ -166,7 +203,7 @@ export default function Background() {
                                 </figure>
                             </div>
                             <div className="card-back">
-                                <p>Personal and professional development experience within Django for over 1 year.</p>
+                                <p>Full stack development experience within Django for over 1 year.</p>
                             </div>
                         </div>
                     </div>
@@ -212,7 +249,66 @@ export default function Background() {
                 <Projects />
             </Container>
 
+            <div className="connect">
+                <Button className="connect-btn" onClick={handleShow}>
+                    <FontAwesomeIcon icon={faMessage}/>
+                </Button>
+            </div>
             
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Connect with Me!</Modal.Title>
+                </Modal.Header>
+
+                <Modal.Body>
+                    <Form onSubmit={onSubmit}>
+                        <Form.Group className="mb-3" controlId="name">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control
+                                as="textarea"
+                                rows={1}
+                                placeholder="First Last"
+                                className="email-box"
+                                onChange={handleChange}
+                                defaultValue={toSend.from_name}
+                            />
+                        </Form.Group>
+
+                        <Form.Group className="mb-3" controlId="email">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control
+                                type="email"
+                                placeholder="name@example.com"
+                                className="email-box"
+                                defaultValue={toSend.reply_to}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlID="message">
+                            <Form.Label>Message</Form.Label>
+                            <Form.Control 
+                                as="textarea"
+                                rows={3} 
+                                placeholder="Reach out to me about anything!"
+                                defaultValue={toSend.message}
+                                onChange={handleChange}
+                            />
+                        </Form.Group>
+                    </Form>
+
+                </Modal.Body>
+
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+
+                    <Button variant="primary" onClick={e => onSubmit(e)} type="submit" value="Submit">
+                        Submit
+                    </Button>
+                </Modal.Footer>
+            </Modal>
 
 
         </Container>
