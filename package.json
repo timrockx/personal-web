@@ -1,7 +1,8 @@
 {
-  "name": "learn-react",
+  "name": "personal-web",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://timrockx.github.io/personal-web/",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
