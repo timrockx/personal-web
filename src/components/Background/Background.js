@@ -39,17 +39,18 @@ export default function Background() {
 
     const [toSend, setToSend] = useState({
         from_name: '',
-        to_name: '',
-        message: '',
+        to_name: 'Timothy Lee',
+        send_message: '',
         reply_to: '',
       })
 
       const handleChange = (e) => {
-        setToSend({ ...toSend, [e.target.name]: e.target.value })
+        setToSend({ ...toSend, [e.target.id]: e.target.value })
       }
 
       const onSubmit = (e) => {
         e.preventDefault();
+        
         emailjs.send(
         'service_19mj5qd',
         'template_ir24x1b',
@@ -57,12 +58,19 @@ export default function Background() {
         'x3xRnupfgldvy_pnL'
         )
         .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
+            setToSend({
+                from_name: '',
+                to_name: 'Timothy Lee',
+                send_message: '',
+                reply_to: '',
+             })
         })
         .catch((err) => {
             console.log('FAILED...', err);
         });
 
+
+    
         handleClose();
       };
 
@@ -263,7 +271,7 @@ export default function Background() {
 
                 <Modal.Body>
                     <Form onSubmit={onSubmit}>
-                        <Form.Group className="mb-3" controlId="name">
+                        <Form.Group className="mb-3" controlId="from_name">
                             <Form.Label>Name</Form.Label>
                             <Form.Control
                                 as="textarea"
@@ -275,7 +283,7 @@ export default function Background() {
                             />
                         </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="email">
+                        <Form.Group className="mb-3" controlId="reply_to">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control
                                 type="email"
@@ -285,13 +293,14 @@ export default function Background() {
                                 onChange={handleChange}
                             />
                         </Form.Group>
-                        <Form.Group className="mb-3" controlID="message">
+
+                        <Form.Group className="mb-3" controlId="send_message">
                             <Form.Label>Message</Form.Label>
                             <Form.Control 
                                 as="textarea"
                                 rows={3} 
                                 placeholder="Reach out to me about anything!"
-                                defaultValue={toSend.message}
+                                defaultValue={toSend.send_message}
                                 onChange={handleChange}
                             />
                         </Form.Group>
