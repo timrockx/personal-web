@@ -5,7 +5,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLayerGroup, faDatabase, faGavel } from '@fortawesome/free-solid-svg-icons'
 
-export default function () {
+export default function Projects() {
   return (
     <div>
         <Container>
