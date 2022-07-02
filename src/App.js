@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, BrowserRouter as Router, HashRouter, Route, Routes } from "react-router-dom";
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Menu from './components/Menu/Menu';
@@ -19,7 +19,7 @@ function App() {
         <title>Timothy Lee</title>
       </Helmet>
 
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<><About/><Menu/></>} />
           <Route path="/background" element={<><Background/><Menu/></>} />
