@@ -80,18 +80,22 @@ img {
 }
 
 .connect-btn:focus {
-    border: none;
-    outline: none !important; 
+
+    outline: none;
+    resize: none;
+    box-shadow: none;
 }
 
 .connect-btn:active {
     border: none;
-    outline: none !important; 
-    box-shadow: none;
+    outline: none;
     resize: none;
+    box-shadow: none;
 }
 
-.email-box:focus {
-    border: none;
-    outline: none !important;
+.form-box:focus {
+
+    outline: none;
+    resize: none;
+    box-shadow: none;
 }

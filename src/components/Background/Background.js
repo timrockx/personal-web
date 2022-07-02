@@ -277,7 +277,7 @@ export default function Background() {
                                 as="textarea"
                                 rows={1}
                                 placeholder="First Last"
-                                className="email-box"
+                                className="form-box"
                                 onChange={handleChange}
                                 defaultValue={toSend.from_name}
                             />
@@ -288,7 +288,7 @@ export default function Background() {
                             <Form.Control
                                 type="email"
                                 placeholder="name@example.com"
-                                className="email-box"
+                                className="form-box"
                                 defaultValue={toSend.reply_to}
                                 onChange={handleChange}
                             />
@@ -300,6 +300,7 @@ export default function Background() {
                                 as="textarea"
                                 rows={3} 
                                 placeholder="Reach out to me about anything!"
+                                className="form-box"
                                 defaultValue={toSend.send_message}
                                 onChange={handleChange}
                             />
