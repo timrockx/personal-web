@@ -16,43 +16,19 @@
             "questionID" : "3",
             "subject": "Personal",
             "question": "What are your favorite hobbies?",
-            "answer": "My hobbies include Formula 1 and weightlifting. I've been pursuing Olympic Weightlifting over the past few months because I find that it helps put my mind at ease and take the stress away from school/work responsibilities for a few hours everyday."
+            "answer": "Over the last few months I've been training as an olympic weightlifter, with the goal to compete at the national level someday. I always viewed sports as a way to escape the stress and nonsense of my personal life, and the gym is a place where I can full zone out all my problems."
         },
         {
             "questionID" : "4",
             "subject": "Work",
             "question": "What is your current position?",
-            "answer": "I'm currently working as a Software Development @ Claudius AI. At Claudius, are working on developing Claudius Scholar, a platform that make the publishing process easier for scholarly law journals across the US."
+            "answer": "Software Development @ Claudius AI. We are working on developing a platform, claudius.scholar.ai, that helps make the publishing process easier for scholarly law journals."
         },
         {
             "questionID": "5",
-            "subject": "Education",
-            "question": "What are you studying at Lehigh?",
-            "answer": "I'm majoring in CSB (Computer Science and Business) program, and additionally minoring in Data Science with a concentration in finance. My goal is to develop an education that can support a variety of career paths, which gives me flexibility to truly find a job I love."
-        }, 
-        {
-            "questionID": "6",
-            "subject": "Work",
-            "question": "What do you like most about working as a Software Developer?",
-            "answer": "I really enjoy the freedom that comes with code development as a whole. It allows me to express my creativity through my work, and in a sense the work is never complete since it can always be improved upon. In the same way, there is always something out there to learn in software, which makes me eager to continue and explore."
-        }, 
-        {
-            "questionID": "7",
             "subject": "Eduation",
-            "question": "How did you become interested in the boundary of CS and Finance?",
-            "answer": "I was primarily a business-oriented student when I arrived at Lehigh, with my eyes focused on finance and banking. However, early-on my CS courses taught me the value of problem-solving, and I was drawn to the power of CS and how it can be applied to making more informed decisions in the finance industry."
-        }, 
-        {
-            "questionID": "8",
-            "subject": "Personal",
-            "question": "What is your greatest strength?",
-            "answer": "My greatest strength is that I'm always looking to learn new skills or get involved with new projects. I learn best while doing, and being eager to get my hands dirty has always served me well with picking up new skills and enhancing my understanding of the topics I work with."
-        }, 
-        {
-            "questionID": "9",
-            "subject": "Personal",
-            "question": "What is your greatest weakness?",
-            "answer": "My greatest weakness is perfectionism. I always want the work I put out to be perfect, which often leads me to over-complicate things and can discourage me to finish certain projects, as the end product isn't what I first envisioned. I've been working to fix this by being more intentional with my work and not over-engineering the final product."
+            "question": "What are you studying at Lehigh?",
+            "answer": "I'm majoring in the CSB (Computer Science and Business) program, and additionally minoring in Data Science with a concentration in finance. My goal is to develop an education that can support a variety of career paths, which gives me flexibility to truly find a job I love."
         }
     ]
 }
