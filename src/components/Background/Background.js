@@ -237,8 +237,8 @@ export default function Background() {
                             <div className="card-front">
                                 <figure>
                                     <img 
-                                        src= "https://numfocus.org/wp-content/uploads/2016/07/pandas-logo-300.png"
-                                        alt="Pandas" 
+                                        src= "https://download.logo.wine/logo/R_(programming_language)/R_(programming_language)-Logo.wine.png"
+                                        alt="R" 
                                     />
                                 </figure>
                             </div>
