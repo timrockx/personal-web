@@ -13,35 +13,36 @@ export default function Menu() {
 
           <Navbar collapseOnSelect expand="sm" className="navbar-nav py-4 mx-auto" fixed="bottom">
 
-              <Navbar.Brand as={HashLink} to="/" className="fs-3">
-                <FontAwesomeIcon icon={faHouse} />&nbsp;Timothy Lee
+              <Navbar.Brand as={HashLink} to="/" className="nav-link fs-3">
+                <FontAwesomeIcon icon={faHouse} className="icon-sm" />
+                  <h4>Home</h4>
               </Navbar.Brand>
 
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Nav className="navbar" activeKey="/">                  
+                  
+                  <Nav.Link as={HashLink} to="/background/#education" className="nav-link fs-4">
+                    <FontAwesomeIcon icon={faSchool} className="icon-sm"/>
+                    <h4>Education</h4>
+                  </Nav.Link>
 
-              <Navbar.Collapse id="responsive-navbar-nav">
-             
-                <Nav className="d-flex justify-content-end flex-grow-1" activeKey="/">                  
-                    
-                    <Nav.Link as={HashLink} to="/background/#education" className="nav-link fs-4">
-                      <FontAwesomeIcon icon={faSchool}/>&nbsp;Education
-                    </Nav.Link>
+                  <Nav.Link as={HashLink} to="/background/#experience" className="nav-link fs-4">
+                    <FontAwesomeIcon icon={faBriefcase} className="icon-sm"/>
+                    <h4>Experience</h4>
+                  </Nav.Link>
 
-                    <Nav.Link as={HashLink} to="/background/#experience" className="nav-link fs-4">
-                      <FontAwesomeIcon icon={faBriefcase}/>&nbsp;Experience
-                    </Nav.Link>
+                  <Nav.Link as={HashLink} to="/background/#skills" className="nav-link fs-4">
+                    <FontAwesomeIcon icon={faWrench} clasName="icon-sm"/>
+                    <h4>Skills</h4>
+                  </Nav.Link>
 
-                    <Nav.Link as={HashLink} to="/background/#skills" className="nav-link fs-4">
-                      <FontAwesomeIcon icon={faWrench}/>&nbsp;Skills
-                    </Nav.Link>
+                  <Nav.Link as={HashLink} to="/background/#projects" className="nav-link fs-4">
+                    <FontAwesomeIcon icon={faLaptopCode} className="icon-sm"/>
+                    <h4>Projects</h4>
+                  </Nav.Link>
 
-                    <Nav.Link as={HashLink} to="/background/#projects" className="nav-link fs-4">
-                      <FontAwesomeIcon icon={faLaptopCode}/>&nbsp;Projects
-                    </Nav.Link>
+              </Nav>
 
-                </Nav>
-
-              </Navbar.Collapse>
+      
 
           </Navbar>
         
