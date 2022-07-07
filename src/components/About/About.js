@@ -81,37 +81,11 @@ export default function About() {
             <div className="chat">
 
                 {answer.length > 0 &&
-                    <div>
-                        <div className="answer messages">
-                            <div className="message">
-                                <p className="text">
-                                {answer}
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="answer messages" >
-                            <div className="message last">
-                                <h5>Stay in touch with me on any of these platforms: </h5>
-                                <ul className="social-media">
-                                    <li>
-                                        <a style={{textDecoration:"none", color:"#fff"}} target="_blank" href="https://www.linkedin.com/in/timothyyinlee/">
-                                            LinkedIn
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a style={{textDecoration:"none", color:"#fff"}} target="_blank" href="https://github.com/timrockx">
-                                            GitHub
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a style={{textDecoration:"none", color:"#fff"}} href="mailto: timothyyinlee@gmail.com">
-                                            Email
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <div className="answer messages">
+                        <div className="message last">
+                            <p className="text">
+                            {answer}
+                            </p>
                         </div>
                     </div>
                 }
@@ -173,7 +147,7 @@ export default function About() {
                     <div className="message last">
                         <p className="text">
                             I'm working as a Software Development Intern at Claudius Scholar, a Legal AI 
-                            startup based out of Princeton University. Looking ahead, I'm planning to pursue a 
+                            startup based out of Princeton University. Looking ahead, I eager to pursue a 
                             career in tech consulting, with an end goal of VC and Product Management.
                         </p>
                     </div>
@@ -191,7 +165,7 @@ export default function About() {
                     <div className="message last">
                         <p className="text">
                             My name is Timothy Lee, and I'm an aspiring Software Developer with a huge passion
-                            in tech and finance. I'm currently in the Computer Science & Business (CSB) program
+                            in tech and finance. I'm currently studying Computer Science & Business (CSB)
                             at Lehigh University, with plans to graduate in May 2024.
                         </p>
                     </div>
