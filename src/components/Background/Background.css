@@ -59,7 +59,7 @@ img {
 
 .connect {
     position: fixed;
-    bottom: 80px;
+    bottom: 85px;
     right: 30px;
     text-align: center;
 }
@@ -80,7 +80,6 @@ img {
 }
 
 .connect-btn:focus {
-
     outline: none;
     resize: none;
     box-shadow: none;
