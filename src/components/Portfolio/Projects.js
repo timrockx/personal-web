@@ -32,7 +32,6 @@ export default function Projects() {
                                 </p>
                                 
                                 <div className="project-button">
-                                    <Button target="_blank" variant="light" href="http://www.chasethatpump.com/">Live Site</Button>
                                     <Button target="_blank" variant="light" href="https://github.com/timrockx/chasethatpump-django/tree/master">Source Code</Button>
                                 </div>
                                 
