@@ -1,7 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, BrowserRouter as Router, HashRouter, Route, Routes } from "react-router-dom";
-import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Menu from './components/Menu/Menu';
 import About from './components/About/About';
