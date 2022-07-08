@@ -8,6 +8,11 @@ import { faSchool, faArrowTrendUp, faChalkboardTeacher, faLaptopCode, faMessage 
 import SkillBar from 'react-skillbars'
 import Projects from '../Portfolio/Projects'
 import emailjs from '@emailjs/browser'
+import RLogo from './images/rLogo.png'
+import OracleLogo from './images/oracleLogo.png'
+import DjangoLogo from './images/djangoLogo.jpg.png'
+import ReactLogo from './images/reactLogo.png'
+
 
 // array of skills with proficiency levels
 const skills = [
@@ -189,7 +194,7 @@ export default function Background() {
                             <div className="card-front">
                                 <figure>
                                     <img 
-                                        src= "https://www.logo.wine/a/logo/React_(web_framework)/React_(web_framework)-Logo.wine.svg"
+                                        src= {ReactLogo}
                                         alt="ReactJS" 
                                     />
                                 </figure>
@@ -205,7 +210,7 @@ export default function Background() {
                             <div className="card-front">
                                 <figure>
                                     <img 
-                                        src= "https://verbose-equals-true.gitlab.io/django-postgres-vue-gitlab-ecs/django.jpg"
+                                        src= {DjangoLogo}
                                         alt="Django" 
                                     />
                                 </figure>
@@ -221,7 +226,7 @@ export default function Background() {
                             <div className="card-front">
                                 <figure>
                                     <img 
-                                        src= "https://download.logo.wine/logo/Oracle_SQL_Developer/Oracle_SQL_Developer-Logo.wine.png"
+                                        src= {OracleLogo}
                                         alt="SQL" 
                                     />
                                 </figure>
@@ -237,7 +242,7 @@ export default function Background() {
                             <div className="card-front">
                                 <figure>
                                     <img 
-                                        src= "https://download.logo.wine/logo/R_(programming_language)/R_(programming_language)-Logo.wine.png"
+                                        src={RLogo}
                                         alt="R" 
                                     />
                                 </figure>
